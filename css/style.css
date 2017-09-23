@@ -183,7 +183,7 @@ li:not(:nth-child(n + 4)):hover{
     width: 100%;
     height: 4.5rem;
     margin: 0;
-    bottom: 70;
+    bottom: 60;
     display: block;
     position: absolute;
 } 

@@ -1,32 +1,3 @@
-$(document).ready(function () {
-
-    if (window.matchMedia("(orientation: portrait)").matches) {
-        var bgImageArrayMobile = ["RTRkC9b.jpg", "1yG232k.jpg", "nHzkb91.jpg", "TzVNKYC.jpg", "Z32f2mS.jpg", "VOYx6Hw.jpg"],
-        base = "https://i.imgur.com/",
-        secs = 5;
-        // you're in PORTRAIT mode
-        bgImageArrayMobile.forEach(function(img){
-            // caches images, avoiding white flash between background replacements
-            new Image().src = base + img;
-            console.log('portrait');
-        }) 
-    }else if (window.matchMedia("(orientation: landscape)").matches) {
-        var bgImageArray = ["DUzitpW.jpg", "wIRjT6N.jpg", "yFX3laD.jpg", "Bcw9mZe.jpg", "dq2YyQ2.jpg", "L2jNG1l.jpg"],
-        base = "https://i.imgur.com/",
-        secs = 5;
-        // you're in LANDSCAPE mode
-        bgImageArray.forEach(function(img){
-            // caches images, avoiding white flash between background replacements
-            new Image().src = base + img;
-            console.log('landscape');
-        })
-    }
-});
-
-
-
-
-
 $(document).ready(function () { 
     //--landing page background image fade-in/fade-out function-- 
     var bgImageArray = ["DUzitpW.jpg", "wIRjT6N.jpg", "yFX3laD.jpg", "Bcw9mZe.jpg", "dq2YyQ2.jpg", "L2jNG1l.jpg"],
@@ -36,7 +7,6 @@ $(document).ready(function () {
         // caches images, avoiding white flash between background replacements
         new Image().src = base + img; 
 });
-
     backgroundSequenceGate();
 
     var runBackground = '';
@@ -226,5 +196,5 @@ $(document).ready(function () {
     $('#click_for_top').click(function(e) {
     e.preventDefault();
     $('html, body').animate({"scrollTop": "0px"}, 400);
-    });   
+    });
 });

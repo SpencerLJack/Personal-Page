@@ -211,3 +211,15 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+#lightbox-container-image-box {
+    max-width: 100%;
+    height:100% !important;
+}
+#lightbox-container-image img {
+    max-width: 100%; 
+}

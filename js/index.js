@@ -1,5 +1,6 @@
 
 $(document).ready(function () { 
+    
     //--landing page background image fade-in/fade-out function-- 
     var bgImageArray = ["DUzitpW.jpg", "wIRjT6N.jpg", "yFX3laD.jpg", "Bcw9mZe.jpg", "dq2YyQ2.jpg", "L2jNG1l.jpg"],
     base = "https://i.imgur.com/",
@@ -36,6 +37,8 @@ $(document).ready(function () {
             backgroundSequence();
         }
     };
+    
+    
     //---landing page background-image
     var myTimeout;
     function backgroundSequence() {
@@ -53,6 +56,8 @@ $(document).ready(function () {
             }, (secs * 1000) * i)
         }   
     };
+    
+    
     //--show menu 
     $('.hamburger_click_me').on('click', function() {
         this.classList.toggle("change");
@@ -72,6 +77,7 @@ $(document).ready(function () {
         }
     });
   
+    
     //--if mouse leaves menu, hide menu  
     $('#side_nav_menu').on('mouseleave', function(e) {
         if ($('#main_navbar').hasClass('show')) {
@@ -85,6 +91,8 @@ $(document).ready(function () {
             $('#full_page_opacity_screen').addClass('hidden');
         }else {}
     });
+    
+    
     //--if esc key pressed, hide menu
     $(document).keyup(function(e) {
        if (e.keyCode == 27) { // escape key maps to keycode `27`
@@ -94,6 +102,8 @@ $(document).ready(function () {
           $('#full_page_opacity_screen').addClass('hidden'); 
         }
     });
+    
+    
     //--lazyload photo fade-in
     $(function () {
         var $lazyImages = $('img.lazy');
@@ -104,37 +114,8 @@ $(document).ready(function () {
             effect: 'fadeIn'            
         });
     });
-    //--header collapse function
-    var mq = window.matchMedia("(min-width: 786px)"); 
-
-    $(window).scroll(function (event) {
-        header();
-    });
     
-    function header() {
-        if (mq.matches) { 
-            if ($(window).scrollTop() < 240) {
-                $("header").removeClass("hide2");
-                $("header").addClass("show1");
-                $("header").slideDown();
-            } else {
-                $("header").removeClass("show1");
-                $("header").addClass("hide2");
-                $("header").slideUp();
-            }
-        } else {
-            if ($(window).scrollTop() < 182) {
-                $("header").removeClass("hide2");
-                $("header").addClass("show1");
-                $("header").slideDown();
-                
-            } else {
-                $("header").removeClass("show1");
-                $("header").addClass("hide2");
-                $("header").slideUp();
-            }
-        };
-    };
+    
     //--logic to change page content based on nav click
     $(function() {
         $('a[id^=mm]').on('click', function(e) {
@@ -198,11 +179,14 @@ $(document).ready(function () {
             document.getElementById("scroll_Up_Arrow").style.display = "none";
         }
     }
+    
+    
     //--scroll to top of page when 'top' is clicked
     $('#scroll_Up_Arrow').click(function(e) {
         e.preventDefault();
         $('html, body').animate({"scrollTop": "0px"}, 400);
     });
+    
     
     //google analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -212,5 +196,4 @@ $(document).ready(function () {
 
     ga('create', 'UA-107122576-1', 'auto');
     ga('send', 'pageview');
-
 });

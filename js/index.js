@@ -187,12 +187,23 @@ $(document).ready(function () {
             }   
         })
     });
-    //scroll to top of page when 'top' is clicked
-    $('#click_for_top').click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({"scrollTop": "0px"}, 400);
-    });
+    
+    //--when the user scrolls down 400px from the top of the document, show the scroll up arrow
+    window.onscroll = function() {scrollFunction()};
 
+        function scrollFunction() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            document.getElementById("scroll_Up_Arrow").style.display = "block";
+        } else {
+            document.getElementById("scroll_Up_Arrow").style.display = "none";
+        }
+    }
+    //--scroll to top of page when 'top' is clicked
+    $('#scroll_Up_Arrow').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({"scrollTop": "0px"}, 400);
+    });
+    
     //google analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

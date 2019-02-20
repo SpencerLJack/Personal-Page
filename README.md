@@ -6,9 +6,7 @@ This app is a photo gallery of the things I see in my life/ experiences I have.
 ## Deployment
 * This App is deployed to Gihub.
 * Link: https://spencej4.github.io/E_4S/
-
-* Github repo:
-* Link:https://github.com/spencej4/E_4S
+* Github repo: https://github.com/spencej4/E_4S
 
 ## Built With
 
